@@ -14,15 +14,29 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text("Home")),
-        body: const Padding(
-          padding: EdgeInsets.all(20.0),
-          child: Text("This is my first App. This is my first App. This is my first App. This is my first App. This is my first App. This is my first App. This is my first App. This is my first App.",
-            textAlign: TextAlign.justify,
-            style: TextStyle(
-              color: Colors.green,
-            fontStyle: FontStyle.italic
+        body: Row(
+          children: [
+            Container(
+              margin: EdgeInsets.only(left: 20,top: 20),
+              padding: EdgeInsets.all(20.0),
+              height: 100,
+              width: 150,
+              decoration: BoxDecoration(
+                color: Colors.pink,
+                borderRadius: BorderRadius.circular(8),
+              ),
             ),
-          ),
+            Container(
+              margin: EdgeInsets.only(left: 20,top: 20),
+              padding: EdgeInsets.all(20.0),
+              height: 100,
+              width: 150,
+              decoration: BoxDecoration(
+                color: Colors.pink,
+                borderRadius: BorderRadius.circular(8),
+              ),
+            )
+          ],
         )
     );
   }
