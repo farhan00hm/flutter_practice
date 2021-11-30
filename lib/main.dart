@@ -32,20 +32,36 @@ class HomePage extends StatelessWidget{
         body: Column(
           children: [
             Container(
-              padding: EdgeInsets.all(35),
+              padding: EdgeInsets.all(20),
               height: 500,
               child: ListView(
-                scrollDirection: Axis.vertical,
-                children: [
-                  _cell(),
+                children: const [
+                  ListTile(
+                    leading: CircleAvatar(
+                      child: Text("F"),
+                    ),
+                    title: Text("Farhan"),
+                    subtitle: Text("hasanfarhan.xyz"),
+                    // onTap: (){},
+                  ),
                   Divider(),
-                  _cell(),
+                  ListTile(
+                    leading: CircleAvatar(
+                      child: Text("F"),
+                    ),
+                    title: Text("Farhan"),
+                    subtitle: Text("hasanfarhan.xyz"),
+                    // onTap: (){},
+                  ),
                   Divider(),
-                  _cell(),
-                  Divider(),
-                  _cell(),
-                  Divider(),
-                  _cell(),
+                  ListTile(
+                    leading: CircleAvatar(
+                      child: Text("F"),
+                    ),
+                    title: Text("Farhan"),
+                    subtitle: Text("hasanfarhan.xyz"),
+                    // onTap: (){},
+                  ),
                 ],
               ),
             )
