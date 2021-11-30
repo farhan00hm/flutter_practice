@@ -23,50 +23,31 @@ class HomePage extends StatelessWidget{
     {"name":"David","email":"david@gmail.com"},
     {"name":"Shopia","email":"shopia@gmail.com"},
     {"name":"warner","email":"warner@gmail.com"},
+    {"name":"Tom","email":"tom@gmail.com"},
+    {"name":"Jerry","email":"jerry@gmail.com"},
+    {"name":"David","email":"david@gmail.com"},
+    {"name":"Shopia","email":"shopia@gmail.com"},
+    {"name":"warner","email":"warner@gmail.com"},
 
   ];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text("Home")),
-        body: Column(
-          children: [
-            Container(
-              padding: EdgeInsets.all(20),
-              height: 500,
-              child: ListView(
-                children: const [
-                  ListTile(
-                    leading: CircleAvatar(
-                      child: Text("F"),
-                    ),
-                    title: Text("Farhan"),
-                    subtitle: Text("hasanfarhan.xyz"),
-                    // onTap: (){},
-                  ),
-                  Divider(),
-                  ListTile(
-                    leading: CircleAvatar(
-                      child: Text("F"),
-                    ),
-                    title: Text("Farhan"),
-                    subtitle: Text("hasanfarhan.xyz"),
-                    // onTap: (){},
-                  ),
-                  Divider(),
-                  ListTile(
-                    leading: CircleAvatar(
-                      child: Text("F"),
-                    ),
-                    title: Text("Farhan"),
-                    subtitle: Text("hasanfarhan.xyz"),
-                    // onTap: (){},
-                  ),
-                ],
-              ),
-            )
-          ],
-        ),
+        body: ListView.builder(itemCount: people.length,
+          itemBuilder: (BuildContext context, int index) {
+          return Column(
+            children: [
+              ListTile(
+                leading: CircleAvatar(
+                  child: Text(people[index]['name'][0]),
+                ),
+                title: Text(people[index]['name']),
+                subtitle: Text(people[index]['email']),
+              )
+            ],
+          );
+        },)
     );
   }
 
