@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 void main(){
   runApp(MaterialApp(
@@ -15,41 +16,12 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text("Home")),
-        body: Column(
-          children: <Widget>[
-            Image.asset("assets/images/straw-berry.jpg"),
-            Container(
-              child: Text(_longText,textAlign: TextAlign.justify,),
-              padding: EdgeInsets.all(20),
-            ),
-            Row(
-              children: [
-                Container(
-                  margin: EdgeInsets.only(left: 20,top: 20),
-                  padding: EdgeInsets.all(5.0),
-                  height: 40,
-                  width: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.pink,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Icon(Icons.linked_camera),
-                ),
-                Container(
-                  margin: EdgeInsets.only(left: 20,top: 20),
-                  padding: EdgeInsets.all(5),
-                  height: 40,
-                  width: 50,
-                  decoration: BoxDecoration(
-                    color: Colors.pink,
-                    borderRadius: BorderRadius.circular(8),
-                  ),
-                  child: Icon(Icons.access_alarm),
-                ),
-              ],
-            )
+        body: ListView(
+          children: [
+            Text(_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText,textAlign: TextAlign.justify,),
+            Image.asset('assets/images/straw-berry.jpg')
           ],
-        ),
+        )
     );
   }
 }
