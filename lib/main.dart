@@ -32,17 +32,51 @@ class HomePage extends StatelessWidget{
               height: 40,
             ),
             Text("Features",style: TextStyle(fontSize: 20,color: Colors.red)),
-            SizedBox(
-              height: 100,
-              width: 100,
-              child: Container(
-                decoration: BoxDecoration(
-                  color: Colors.pink,
+            SizedBox(height: 30),
+            Row(
+              children: [
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                  ),
                 ),
-              ),
-            )
+                SizedBox(width: 10),
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                  ),
+                ),
+                SizedBox(width: 10),
+                Container(
+                  height: 50,
+                  width: 50,
+                  decoration: BoxDecoration(
+                    color: Colors.black,
+                  ),
+                ),
+              ],
+            ),
+            SizedBox(height: 30,),
+            Row(children: [
+              _rowCell(0xFFD50000),
+              _rowCell(0xFFB71C1C),
+              _rowCell(0xFFDD2C00),
+            ],),
           ],
         ),
     );
   }
+
+  Widget _rowCell(int _color){
+    return Expanded(child: Container(
+        height: 50,
+        decoration: BoxDecoration(color: Color(_color)),
+      child: Icon(Icons.link),
+    ));
+  }
 }
+
