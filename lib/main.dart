@@ -16,12 +16,33 @@ class HomePage extends StatelessWidget{
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(title: const Text("Home")),
-        body: ListView(
+        body: Column(
           children: [
-            Text(_longText+_longText+_longText+_longText+_longText+_longText+_longText+_longText,textAlign: TextAlign.justify,),
-            Image.asset('assets/images/straw-berry.jpg')
+            Stack(
+              children: [
+                Image.asset('assets/images/straw-berry.jpg'),
+                Positioned(
+                  bottom: 40,
+                    left: 30,
+                    child: Text("This is Straw Berry",textAlign: TextAlign.center,style: TextStyle(fontSize: 20,color: Colors.yellow),)
+                ),
+              ],
+            ),
+            SizedBox(
+              height: 40,
+            ),
+            Text("Features",style: TextStyle(fontSize: 20,color: Colors.red)),
+            SizedBox(
+              height: 100,
+              width: 100,
+              child: Container(
+                decoration: BoxDecoration(
+                  color: Colors.pink,
+                ),
+              ),
+            )
           ],
-        )
+        ),
     );
   }
 }
